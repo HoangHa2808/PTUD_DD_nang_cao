@@ -1,0 +1,35 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Đăng nhập</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content [fullscreen]="true">
+
+  <!-- Login Page -->
+  <div class="container"  *ngIf="screen == 'signin'">
+    <h1 class="heading">👋 Welcome<br><br></h1>
+    <p class="para">Đăng nhập để tiếp tục!</p>
+    <form [formGroup]="formData">
+      <ion-item lines="none" class="ion-item">
+        <fieldset  class="input-item">
+          <legend>Email Id</legend> 
+          <ion-input formControlName="email" type="email" placeholder="hadoan@gmail.com"></ion-input>
+        </fieldset>
+      </ion-item>
+      <ion-item lines="none" class="ion-item">
+        <fieldset class="input-item">
+          <legend>Mật khẩu</legend> 
+          <ion-input formControlName="password" type="password" placeholder="*******" labelPlacement="stacked"></ion-input>
+        </fieldset>
+      </ion-item>
+       <ion-button class="login-button" (click)="login()" expand="block">Đăng nhập</ion-button>
+    </form>
+  </div>
+</ion-content>
+
+<ion-footer color="white">
+  <ion-toolbar>
+    <p class="copyright">copyright © 2023 ❤️ by&nbsp;<a>Nhật Hạ</a></p>
+  </ion-toolbar>
+</ion-footer>
